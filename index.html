@@ -17,6 +17,7 @@
   </script>
 </head>
 <body>
+  <h1>Version 0.0.1</h1>
   <div id="syllables">
   </div>
   <button id="add-syllable">
@@ -142,6 +143,7 @@
     var spoken;
 
     function process() {
+      console.log(this.value)
       uipa = this.value
       // nothing to process
       if (uipa == null || uipa.length == 0) {
