@@ -122,10 +122,8 @@
         }
 
         pronounce = document.createElement('button')
-        pronounce.appendChild(document.createTextNode(" - Pronounce"))
-        pronounce.addEventListener("click", function() {
-          process(word)
-        })
+        pronounce.appendChild(document.createTextNode("Pronounce"))
+        pronounce.value = word
         result.append(pronounce)
 
         results.appendChild(result)
@@ -143,8 +141,8 @@
 
     var spoken;
 
-    function process(uipa) {
-
+    function process() {
+      uipa = this.value
       // nothing to process
       if (uipa == null || uipa.length == 0) {
         return;
